@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Family Tides Portrush – Guest Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b3d91" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preload" href="assets/whiterocks.jpg" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="hero" role="img" aria-label="Whiterocks Beach, Portrush"></div>
+
+  <header class="topbar">
+    <h1>Family Tides Portrush</h1>
+    <p>Welcome! Use the remote (◀ ▶ ▲ ▼, OK) to navigate.</p>
+  </header>
+
+  <main class="grid" id="grid" aria-label="Main menu">
+    <button class="tile" id="tile-video" data-col="0" aria-label="Hot Tub Instructions video">
+      <div class="tile-body">
+        <h2>Hot Tub Instructions</h2>
+        <p>Watch on YouTube</p>
+      </div>
+      <div class="tile-badge">Video</div>
+    </button>
+
+    <a class="tile" id="tile-book" data-col="1" aria-label="Book your stay"
+       href="https://www.familytidesportrush.com" rel="noopener">
+      <div class="tile-body">
+        <h2>Book Your Stay</h2>
+        <p>Open booking website</p>
+      </div>
+      <div class="tile-badge">Website</div>
+    </a>
+
+    <button class="tile" id="tile-rules" data-col="2" aria-label="House Rules">
+      <div class="tile-body">
+        <h2>House Rules</h2>
+        <p>Quick guide for guests</p>
+      </div>
+      <div class="tile-badge">Info</div>
+    </button>
+  </main>
+
+  <!-- Video modal -->
+  <div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-label="Hot Tub Instructions video">
+    <div class="modal-content">
+      <button class="close" id="closeVideo" aria-label="Close video">✕</button>
+      <div class="video-frame" id="videoContainer">
+        <!-- The YouTube iframe is injected here on open -->
+        <noscript>
+          <p>Open the video on YouTube:</p>
+          <p><a id="ytFallback" href="#" rel="noopener">Open in YouTube</a></p>
+        </noscript>
+      </div>
+      <p class="hint">Press BACK to close.</p>
+    </div>
+  </div>
+
+  <!-- Rules modal -->
+  <div class="modal" id="rulesModal" aria-hidden="true" role="dialog" aria-label="House Rules">
+    <div class="modal-content">
+      <button class="close" id="closeRules" aria-label="Close rules">✕</button>
+      <article class="rules">
+        <h2>House Rules</h2>
+        <ul>
+          <li>Check-in after 3pm · Check-out by 10am.</li>
+          <li>No smoking or vaping inside.</li>
+          <li>No parties/events. Registered guests only.</li>
+          <li>Quiet hours: 10pm–7am. Please respect neighbours.</li>
+          <li>Hot tub: shower before use; no glass; no fake tan; no oils; children supervised; replace cover after use.</li>
+          <li>Please rinse sand off outside before entering.</li>
+          <li>Bins: general waste & recycling as labelled.</li>
+          <li>Emergency: call 999. Address: Portrush (see welcome book for full address).</li>
+          <li>Wi-Fi: see welcome book for network & password.</li>
+        </ul>
+        <p>Thanks for looking after Family Tides — have a brilliant stay!</p>
+      </article>
+      <p class="hint">Press BACK to close.</p>
+    </div>
+  </div>
+
+  <script>
+    // <<< SET YOUR YOUTUBE VIDEO ID HERE >>>
+    window.YOUTUBE_VIDEO_ID = "CdikoFCIQe4";
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
